@@ -1,0 +1,27 @@
+name: 'Rome frontend check'
+description: 'Run Rome checks in your Github Actions.'
+
+author: 'romainnorberg'
+
+branding:
+  icon: check-circle
+  color: yellow
+
+inputs:
+  version: 
+    description: 'Rome version to install'
+    required: false
+    default: null
+
+  check-flags: 
+    description: 'Arguments to pass to check'
+    required: false
+    default: ''
+
+outputs:
+  time: 
+    description: 'The time (test)'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
